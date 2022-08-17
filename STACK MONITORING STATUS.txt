@@ -1,8 +1,0 @@
-Monitoring the Stack Status
-Procedure
-Run the (display stack) command to check information about member switches.
-Run the (display stack peers)command to check information about the neighbors of a member switch in the stack.
-Run the (display stack configuration) [ slot slot-id ] command to check the stack configuration.
-Run the (display stack port [ configuration ] [ slot slot-id ])command to check information about physical member ports of logical stack ports.
-Run the (display interface stack-port [ slot-id/port-id ]) command to check statistics on stack ports.
- NOTE:
