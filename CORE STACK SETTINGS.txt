@@ -1,0 +1,53 @@
+1`login as: jorellon
+Keyboard-interactive authentication prompts from server:
+| User Authentication
+| Password:
+End of keyboard-interactive prompts from server
+
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2021-08-18 18:31:06+08:00.
+
+
+
+<NSJBIC01>display stack configuration
+
+---------------Configuration on slot 0 Begin---------------
+stack enable
+stack slot 0 renumber 0
+stack slot 0 priority 200
+stack reserved-vlan 4093
+stack timer mac-address switch-delay 10
+
+interface stack-port 0/1
+ port interface XGigabitEthernet0/0/22 enable
+
+interface stack-port 0/2
+ port interface XGigabitEthernet0/0/23 enable
+---------------Configuration on slot 0 End-----------------
+
+---------------Configuration on slot 1 Begin---------------
+stack enable
+stack slot 0 renumber 1
+stack slot 1 priority 150
+stack reserved-vlan 4093
+stack timer mac-address switch-delay 10
+
+interface stack-port 1/1
+ port interface XGigabitEthernet1/0/22 enable
+
+interface stack-port 1/2
+ port interface XGigabitEthernet1/0/23 enable
+---------------Configuration on slot 1 End-----------------
+
+<NSJBIC01>display stack
+Stack mode: Service-port
+Stack topology type: Ring
+Stack system MAC: 1c20-dbd7-8d70
+MAC switch delay time: 10 min
+Stack reserved VLAN: 4093
+Slot of the active management port: --
+Slot      Role        MAC Address      Priority   Device Type
+-------------------------------------------------------------
+0         Master      1c20-dbd7-8d70   200        S6720-30C-EI-24S-AC
+1         Standby     1c20-dbd7-96f0   150        S6720-30C-EI-24S-AC
